@@ -20,11 +20,11 @@ body{
 .wrapper{
     width: 450px;
     color: whitesmoke;
-    border: 2px solid rgba(255, 255, 255, 0.2);
+    border: 2px solid rgba(23, 17, 17, 1);
     backdrop-filter: blur(20px);
     background: transparent;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-    border-radius: 20px;
+    box-shadow: 0 0 10px rgba(228, 228, 228, 0.4);
+    border-radius: 40px;
     padding:30px 40px; 
    
 }
