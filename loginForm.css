@@ -54,6 +54,9 @@ body{
     padding: 20px 45px 20px 20px;
 }
 
+.input-box input:focus-visible{
+    border-color: black;
+}
 .input-box input::placeholder{
     color: whitesmoke;
 }
@@ -95,7 +98,7 @@ body{
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     cursor: pointer;
     font-size: 16px;
-    color: grey;
+    color: black;
     font-weight: 600;
 }
 
