@@ -31,7 +31,7 @@ if(isset($_POST['name'])){
     if($link->query($sql) == TRUE){
         echo "<h1>Successfully Done Your Registration</h1>";
         echo "<h3>Thank you for Registration!!!</h3>";
-        // header("Location: index.html"); 
+        header("Location: index.html"); 
         exit();
     }
     else {

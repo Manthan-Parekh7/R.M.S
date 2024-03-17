@@ -19,8 +19,8 @@
     $result = mysqli_stmt_get_result($stmt);
     
     if (mysqli_num_rows($result) > 0) {
-        // header("Location: index.html"); 
-        // exit();
+        header("Location: index.html");
+        exit();
     } else {
         echo "<h1>You are not registered yet or you entered the wrong password</h1>";
     }
