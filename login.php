@@ -1,4 +1,5 @@
 <?php
+if(isset($_POST['email'])){
     $server = "127.0.0.1";
     $username = "root";
     $password = "";
@@ -18,13 +19,19 @@
     mysqli_stmt_execute($stmt);
     $result = mysqli_stmt_get_result($stmt);
     
-    if (mysqli_num_rows($result) > 0) {
+    if (mysqli_num_rows($result) > 0) { //if user exist
         header("Location: index.html");
         exit();
-    } else {
-        echo "<h1>You are not registered yet or you entered the wrong password</h1>";
+    } else {    //User not exist in data base or entered wrong password
+        function alert($message) {
+            echo "<script>alert('$message');
+            window.location.href='loginForm.html'
+            </script>";
+        }
+        alert("You are not registered yet or entered wrong password");
     }
     
     mysqli_stmt_close($stmt);
     mysqli_close($link);
+}
 ?>

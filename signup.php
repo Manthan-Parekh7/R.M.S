@@ -16,23 +16,35 @@ if(isset($_POST['name'])){
     $confpassword = $_POST['cpassword'];
     
     if($password !== $confpassword) {
-        echo "<h2>Please check the password<h2><br><h2>Confirm password and password must be same.</h2>";
+        function alert($message){
+            echo "<script>
+                alert('$message');
+                window.location.href= 'signup.html'
+            </script>";
+        }
+       alert("Failed to register because your password and confirm password not match");
     }
     else{
     $query = mysqli_query($link , "SELECT * FROM `registration` WHERE email = '$email'");
     if(mysqli_num_rows($query) > 0){
-        echo "<h1>Email id already in use</h1><br>";
-        echo "<h2>Go to login page</h2>";
+        function alert($message) {
+            echo "<script>alert('$message');
+            window.location.href='loginForm.html'
+            </script>";
+        }
+        alert("Email id already in use sending you at login page!!");
     }
     else{
 
     $sql = "INSERT INTO `registered users`.`registration` (`name`, `email`, `password`, `conf.password`, `dt`) VALUES ('$name','$email','$password','$confpassword', current_timestamp());";
     
     if($link->query($sql) == TRUE){
-        echo "<h1>Successfully Done Your Registration</h1>";
-        echo "<h3>Thank you for Registration!!!</h3>";
-        header("Location: index.html"); 
-        exit();
+        function alert($message){
+            echo "<script>alert('$message');
+            window.location.href='index.html'
+            </script>";
+        }
+        alert("You are registered successfully , Thank you for registration");
     }
     else {
         echo "ERROR : $sql <br> $link->error Data Not Entered";
