@@ -5,13 +5,37 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
+    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="signup.css">
+    <style>
+        .icon{
+            top: 0;
+            left: 0;
+            display: flex;
+            justify-content: left;
+            align-items: start;
+        }
+    </style>
 </head>
 
 <body>
+    <div class="container1">
+        <ul class="navbar">
+            <div class="icon">
+                <a href="home.html"><i class='bx bxs-home'></i></a>
+            </div>
+            <div class="login">
+                <a href="login.html">Login In</a>
+            </div>
+        </ul>
+    </div>
+    
     <div class="container">
+
         <form action="signup.php" method="post" autocomplete="off">
+
+        <form action="index.php" method="post">
             <h1>Sign Up</h1>
             <div class="name">
 
@@ -20,6 +44,7 @@
             <div class="email">
 
                 <input type="email" placeholder="Enter Your Email Adress" name="email" required></i><i class='bx bxs-envelope' ></i>
+                <input type="email" placeholder="Enter Your Email Adress" required><i class='bx bxs-envelope' ></i>
             </div>
             <div class="password">
 
@@ -32,7 +57,9 @@
             <div class="button">
                 <button>Sign Up</button>
             </div>
+
             <div class="account">Already Have an Account ?? <a href="loginForm.html">Log In</a></div>
+            <div class="account">Already Have an Account ?? <a href="login.html">Log In</a></div>
         </form>
     </div>
 </body>
