@@ -1,56 +1,52 @@
 <?php
-if(isset($_POST['email'])){
-    $server = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $db_name = "registered users";
+require_once 'config.php';
 
-    $link = mysqli_connect($server , $username , $password , $db_name);
-
-    if($link === false) {
-        die("ERROR : - connection to this database failed due to". mysqli_connect_error());
-    }
     $name = $_POST['name'];
-    $email = $_POST['email']; 
+    $email = $_POST['email'];
     $password = $_POST['password'];
     $confpassword = $_POST['cpassword'];
-    
-    if($password !== $confpassword) {
-        function alert($message){
+
+    if ($password !== $confpassword) {
+        function alert($message)
+        {
             echo "<script>
                 alert('$message');
                 window.location.href= 'signup.html'
             </script>";
         }
-       alert("Failed to register because your password and confirm password not match");
-    }
-    else{
-    $query = mysqli_query($link , "SELECT * FROM `registration` WHERE email = '$email'");
-    if(mysqli_num_rows($query) > 0){
-        function alert($message) {
-            echo "<script>alert('$message');
+        alert("Failed to register because your password and confirm password not match");
+    } else {
+        $query = mysqli_query($link, "SELECT * FROM `registration` WHERE email = '$email'");
+        if (mysqli_num_rows($query) > 0) {
+            function alert($message)
+            {
+                echo "<script>alert('$message');
             window.location.href='login.html'
             </script>";
-        }
-        alert("Email id already in use sending you at login page!!");
-    }
-    else{
+            }
+            alert("Email id already in use sending you at login page!!");
+        } else {
+            $stmt = mysqli_prepare($link, "INSERT INTO `registration` (`name`, `email`, `password`, `conf.password`, `dt`) VALUES (?, ?, ?, ?, current_timestamp())");
 
-    $sql = "INSERT INTO `registered users`.`registration` (`name`, `email`, `password`, `conf.password`, `dt`) VALUES ('$name','$email','$password','$confpassword', current_timestamp());";
-    
-    if($link->query($sql) == TRUE){
-        function alert($message){
-            echo "<script>alert('$message');
-            window.location.href='index.html'
-            </script>";
+            // Bind parameters to the prepared statement
+            mysqli_stmt_bind_param($stmt, "ssss", $name, $email, $password, $confpassword);
+
+            // Execute the prepared statement
+            if (mysqli_stmt_execute($stmt)) {
+                function alert($message)
+                {
+                    echo "<script>alert('$message');
+                window.location.href='index.html'
+                </script>";
+                }
+                alert("You are registered successfully , Thank you for registration");
+            } else {
+                echo "ERROR: Unable to execute $sql. " . mysqli_error($link);
+            }
+
+            // Close the prepared statement
+            mysqli_stmt_close($stmt);
         }
-        alert("You are registered successfully , Thank you for registration");
     }
-    else {
-        echo "ERROR : $sql <br> $link->error Data Not Entered";
-    }
-    }
-}
     $link->close();
-}
 ?>
