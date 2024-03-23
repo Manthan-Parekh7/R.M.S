@@ -25,7 +25,7 @@ if(isset($_POST['email'])){
     } else {    //User not exist in data base or entered wrong password
         function alert($message) {
             echo "<script>alert('$message');
-            window.location.href='loginForm.html'
+            window.location.href='login.html'
             </script>";
         }
         alert("You are not registered yet or entered wrong password");
