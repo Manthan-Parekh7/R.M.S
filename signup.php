@@ -1,5 +1,5 @@
 <?php
-if(isset($_POST['name'])){
+if(isset($_POST['email'])){
     $server = "127.0.0.1";
     $username = "root";
     $password = "";
@@ -29,7 +29,7 @@ if(isset($_POST['name'])){
     if(mysqli_num_rows($query) > 0){
         function alert($message) {
             echo "<script>alert('$message');
-            window.location.href='loginForm.html'
+            window.location.href='login.html'
             </script>";
         }
         alert("Email id already in use sending you at login page!!");
