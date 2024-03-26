@@ -94,12 +94,12 @@ body{
     border-radius: 40px;
     box-shadow: 0 0 5px black;
     cursor: pointer;
-<<<<<<<< HEAD:login.css
+/* <<<<<<<< HEAD:login.css */
     border: 1px solid black;
     font-size: 20px;
-========
+/* ======== */
     font-size: 16px;
->>>>>>>> 56a2a9f2035855d3a5838e2f00cfdd51d24f7cd7:loginForm.css
+/* >>>>>>>> 56a2a9f2035855d3a5838e2f00cfdd51d24f7cd7:loginForm.css */
     color: black;
     font-weight: 600;
 }
