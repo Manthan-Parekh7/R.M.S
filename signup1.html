@@ -5,38 +5,32 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sign Up</title>
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="signup.css">
-    <style>
-        .icon{
-            top: 0;
-            left: 0;
-            display: flex;
-            justify-content: left;
-            align-items: start;
-        }
-    </style>
 </head>
 
 <body>
     <div class="container1">
         <ul class="navbar">
             <div class="icon">
-                <a href="index.html"><i class='bx bxs-home'></i></a>
+                <a href="home.html"><i class='bx bxs-home'></i></a>
             </div>
-            <div class="login">
-                <a href="login.html">Login In</a>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
             </div>
         </ul>
     </div>
-    
-    <div class="container">
 
-        <form action="signup.php" method="post" autocomplete="off">
-            <h1>Sign Up</h1>
-            <div class="name">
-
+    <div class="box">
+        <div class="container">
                 <input type="text" name="name" placeholder="Create User Name"><i class='bx bx-user'></i>
             </div>
             <p class="error username_error"></p>
@@ -59,9 +53,31 @@
                 <input type="button" name="signup" value="signup">
                 <p class="success"></p>
             </div>
+            <form action="signup.php" method="post">
 
-            <div class="account">Already Have an Account ?? <a href="login.html">Log In</a></div>
-        </form>
+                <h1>Sign Up</h1>
+                <div class="name">
+
+                    <input type="text" placeholder="Create User Name" required><i class='bx bx-user'></i>
+                </div>
+                <div class="email">
+
+                    <input type="email" placeholder="Enter Your Email Adress" required><i class='bx bxs-envelope'></i>
+                </div>
+                <div class="password">
+
+                    <input type="password" placeholder="Create Password" required>
+                </div>
+                <div class="cpassword">
+
+                    <input type="password" placeholder="Confirm Password" required><i class='bx bxs-lock-alt'></i>
+                </div>
+                <div class="button">
+                    <button>Sign Up</button>
+                </div>
+                <div class="account">Already Have an Account ?? <a href="login.html">Log In</a></div>
+            </form>
+        </div>
     </div>
 </body>
 
