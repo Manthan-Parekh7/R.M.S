@@ -3,7 +3,8 @@ require_once 'config.php';
 
     $email = $_POST['email'];
     $password = $_POST['password'];
-    
+    // $showError = false;
+
     $stmt = mysqli_prepare($link, "SELECT * FROM `registration` WHERE email = ? AND `conf.password` = ?");
     mysqli_stmt_bind_param($stmt, "ss", $email, $password);
     mysqli_stmt_execute($stmt);
@@ -13,12 +14,13 @@ require_once 'config.php';
         header("Location: index.html");
         exit();
     } else {    //User not exist in data base or entered wrong password
-        function alert($message) {
+        function alert1($message) {
             echo "<script>alert('$message');
             window.location.href='login.html'
             </script>";
         }
-        alert("You are not registered yet or entered wrong password");
+        alert1("You are not registered yet or entered worng password!!");
+        // $showError = "You are not registered yet or entered wrong password";
     }
     
     mysqli_stmt_close($stmt);

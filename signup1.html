@@ -37,22 +37,27 @@
             <h1>Sign Up</h1>
             <div class="name">
 
-                <input type="text" name="name" placeholder="Create User Name" required><i class='bx bx-user'></i>
+                <input type="text" name="name" placeholder="Create User Name"><i class='bx bx-user'></i>
             </div>
+            <p class="error username_error"></p>
             <div class="email">
 
-                <input type="email" placeholder="Enter Your Email Adress" name="email" required></i><i class='bx bxs-envelope' ></i>
+                <input type="email" placeholder="Enter Your Email Adress" name="email"></i><i class='bx bxs-envelope' ></i>
+                <p class="error email_error"></p>
             </div>
+            
             <div class="password">
-
-                <input type="password" placeholder="Create Password" name="password" required>
+                <input type="password" placeholder="Create Password" name="password">
+                <p class="error password_error"></p>
             </div>
             <div class="cpassword">
-
-                <input type="password" placeholder="Confirm Password" name="cpassword" required><i class='bx bxs-lock-alt' ></i>
+                <input type="password" placeholder="Confirm Password" name="cpassword"><i class='bx bxs-lock-alt' ></i>
+                <p class="error cpassword_error"></p>
             </div>
+
             <div class="button">
-                <button>Sign Up</button>
+                <input type="button" name="signup" value="signup">
+                <p class="success"></p>
             </div>
 
             <div class="account">Already Have an Account ?? <a href="login.html">Log In</a></div>

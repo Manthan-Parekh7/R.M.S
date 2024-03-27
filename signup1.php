@@ -5,6 +5,10 @@ require_once 'config.php';
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confpassword = $_POST['cpassword'];
+    $username_error = null;
+    $email_error = null;
+    $password_error = null;
+    $cpassword_error = null;
 
     if ($password !== $confpassword) {
         function alert($message)
@@ -15,7 +19,21 @@ require_once 'config.php';
             </script>";
         }
         alert("Failed to register because your password and confirm password not match");
-    } else {
+    } 
+
+    else if(empty(trim($name))){
+        echo $username_error = "Field user name is empty";
+    }
+    else if(empty(trim($email))){
+        echo $email_error = "Field email is empty";
+    }
+    else if(empty(trim($password))){
+        echo $password_error = "Field password is empty";
+    }
+    else if(empty(trim($email))){
+        echo $cpassword_error = "Field confirm password is empty";
+    }
+    else{
         $query = mysqli_query($link, "SELECT * FROM `registration` WHERE email = '$email'");
         if (mysqli_num_rows($query) > 0) {
             function alert($message)
