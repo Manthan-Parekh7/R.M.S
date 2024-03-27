@@ -1,46 +1,58 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Log In</title>
-    <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
     <link rel="shortcut icon" href="signup favicon.png" type="image/x-icon">
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
     <link rel="stylesheet" href="login.css">
 </head>
+
 <body>
     <div class="container1">
         <ul class="navbar">
             <div class="icon">
                 <a href="home.html"><i class='bx bxs-home'></i></a>
             </div>
-            <div class="signup">
-                <a href="signup.html">Sign Up</a>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
             </div>
         </ul>
     </div>
 
-    <div class="wrapper">
-        <form action="index.php" method="post">
-            <h1>Login</h1>
-            <div class="input-box">
-                <input type="text" name="name" placeholder="Enter Your Name" required>
-                <i class='bx bx-user'></i>
-            </div>
-            <div class="input-box">
-                <input type="password" name="password" placeholder="Enter Your Password" required>
-                <i class='bx bx-lock'></i>
-            </div>
-            <div class="remember-forgot">
-                <label><input type="checkbox" name="remember" id="">Remember Me</label>
-                <a href="#" target="_blank" >Forgot Password</a>
-            </div>
-            <button type="submit" class="btn">Login</button>
-            <div class="register-link">
-                <p>Don't Have An Account?? <a href="signup.html">Register</a></p>
-            </div>
-        </form>
+    <div class="box">
+        <div class="wrapper">
+            <form action="login.php" method="post">
+                <h1>Login</h1>
+                <div class="input-box">
+                    <input type="text" name="name" placeholder="Enter Your Name" required>
+                    <i class='bx bx-user'></i>
+                </div>
+                <div class="input-box">
+                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                    <i class='bx bx-lock'></i>
+                </div>
+                <div class="remember-forgot">
+                    <label><input type="checkbox" name="remember" id="">Remember Me</label>
+                    <a href="#" target="_blank">Forgot Password</a>
+                </div>
+                <button type="submit" class="btn">Login</button>
+                <div class="register-link">
+                    <p>Don't Have An Account?? <a href="signup.html">Register</a></p>
+                </div>
+            </form>
+        </div>
     </div>
 </body>
+
 </html>

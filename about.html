@@ -34,11 +34,11 @@
 
         .box {
             background-color: white;
-            width: 400px;
+            width: 450px;
             height: 400px;
             border-radius: 40px;
             display: grid;
-            grid-template-columns: 150px 250px;
+            grid-template-columns: 150px 300px;
             font-size: 20px;
             padding: 0px 20px;
         }
@@ -54,11 +54,11 @@
         }
 
         .box .follow {
-            grid-column: 1 / span 2;
+            /* grid-column: 1 / span 2; */
         }
 
         .box .logo {
-            grid-column: 1 / span 2;
+            /* grid-column: 1 / span 2; */
             display: flex;
             justify-content: space-evenly;
         }
@@ -74,6 +74,18 @@
             opacity: 1;
         }
 
+        .logo #insta:hover{
+            color: rgb(250, 2, 250);
+        }
+
+        .logo #linked:hover{
+            color: blue;
+        }
+
+        .logo #git:hover{
+            color: black;
+        }
+
         .emailid a {
             text-decoration: none;
             color: black;
@@ -87,10 +99,59 @@
         .phoneno , .emailid{
             font-family:Arial, Helvetica, sans-serif;
         }
+
+        .navbar a {
+            font-size: 25px;
+            color: white;
+            text-decoration: none;
+        }
+
+        .icon {
+            list-style: none;
+            padding-left: -20px;
+        }
+
+        .navbar {
+            display: flex;
+            box-sizing: border-box;
+            background-color: black;
+            height: 50px;
+            margin: -99px -7px 0px -7px;
+            padding-top: 5px;
+            width: 100%;
+            justify-content:start;
+            align-items: center;
+            position: fixed;
+        }
+        
+        .navbar a:hover{
+            cursor: pointer;
+            color: rgb(255, 106, 0);
+        }
+        .navbar i{
+            font-size: 30px;
+        }
+
     </style>
 </head>
 
 <body>
+    <div class="container1">
+        <ul class="navbar">
+            <div class="icon">
+                <a href="home.html"><i class='bx bxs-home'></i></a>
+            </div>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
+            </div>
+            <div class="">
+                <a href=""></a>
+            </div>
+        </ul>
+    </div>
     <div class="heading">About Us</div>
     <div class="container">
         <div class="box">
@@ -101,23 +162,23 @@
             <div class="emailid"><a href="mailto:pansuriyahirav@gmail.com">pansuriyahirav@gmail.com</a></div>
             <div class="follow">Follow Us On : </div>
             <div class="logo">
-                <a href="https://www.instagram.com/pansuriya_hirav_?utm_source=qr&igsh=Z2Q1eXd1Zm5teGtv" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="https://www.linkedin.com/in/hirav-pansuriya-312b872a2?utm_source=shareutm_campaign=share_viautm_content=profileutm_medium=android_app" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="https://github.com/HiravPansuriya" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/pansuriya_hirav_?utm_source=qr&igsh=Z2Q1eXd1Zm5teGtv" target="_blank"><i class='bx bxl-instagram-alt' id="insta" ></i></a>
+                <a  href="https://www.linkedin.com/in/hirav-pansuriya-312b872a2?utm_source=shareutm_campaign=share_viautm_content=profileutm_medium=android_app" target="_blank"><i class='bx bxl-linkedin-square' id="linked"></i></a>
+                <a href="https://github.com/HiravPansuriya" target="_blank"><i class='bx bxl-github' id="git"></i></a>
             </div>
         </div>
 
         <div class="box">
             <div class="name">Parekh Manthan</div>
             <div class="phone">Phone : </div>
-            <div class="phoneno">8799580058 </div>
+            <div class="phoneno">9054406678 </div>
             <div class="email">Email : </div>
-            <div class="emailid"><a href="mailto:pansuriyahirav@gmail.com">pansuriyahirav@gmail.com</a></div>
+            <div class="emailid"><a href="mailto:manthanparekh455@gmail.com">manthanparekh455@gmail.com</a></div>
             <div class="follow">Follow Us On : </div>
             <div class="logo">
-                <a href="" target="_blank"><i class='bx bxl-instagram-alt'></i></a>
-                <a href="" target="_blank"><i class='bx bxl-linkedin-square'></i></a>
-                <a href="" target="_blank"><i class='bx bxl-github'></i></a>
+                <a href="https://www.instagram.com/pansuriya_hirav_?utm_source=qr&igsh=Z2Q1eXd1Zm5teGtv" target="_blank"><i class='bx bxl-instagram-alt' id="insta" ></i></a>
+                <a  href="https://www.linkedin.com/in/hirav-pansuriya-312b872a2?utm_source=shareutm_campaign=share_viautm_content=profileutm_medium=android_app" target="_blank"><i class='bx bxl-linkedin-square' id="linked"></i></a>
+                <a href="https://github.com/HiravPansuriya" target="_blank"><i class='bx bxl-github' id="git"></i></a>
             </div>
         </div>
     </div>

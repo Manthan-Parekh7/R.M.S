@@ -11,13 +11,14 @@
 
     <style>
         body {
-            background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover;
+            /* background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover; */
+            background-color: rgb(203, 190, 190);
             min-height: 100vh;
         }
 
         .navbar a {
             font-size: 25px;
-            color: gray;
+            color: white;
             text-decoration: none;
         }
 
@@ -29,24 +30,20 @@
         .navbar {
             display: flex;
             box-sizing: border-box;
-            background-color: transparent;
-            /* height: 50px; */
-            margin-right: 10px;
-            background: transparent;
-            /* border: 1px solid gray; */
-            backdrop-filter: blur(20px);
-            /* box-shadow: 0px 0px 10px black; */
+            background-color: black;
+            height: 50px;
+            margin: -7px -7px 0px -7px;
             padding-right: 20px;
+            padding-top: 5px;
             width: 100%;
             justify-content:end;
             align-items: center;
+            position: fixed;
         }
         
         .navbar a:hover{
-            text-decoration: underline;
             cursor: pointer;
-            color: white;
-            text-shadow: 2px 2px 10px black;
+            color: rgb(255, 106, 0);
         }
         .navbar i{
             font-size: 30px;
