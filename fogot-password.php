@@ -64,7 +64,6 @@
         }
     </style>
 </head>
-
 <body>
     <form action="send-password-reset.php" method="get" autocomplete="off">
         <div class="container">
