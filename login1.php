@@ -16,7 +16,7 @@ require_once 'config.php';
     } else {    //User not exist in data base or entered wrong password
         function alert1($message) {
             echo "<script>alert('$message');
-            window.location.href='login.html'
+            window.location.href='login1.html'
             </script>";
         }
         alert1("You are not registered yet or entered worng password!!");
