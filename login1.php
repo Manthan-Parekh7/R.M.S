@@ -28,7 +28,7 @@ if (isset($_POST['email'])) {
     mysqli_stmt_close($stmt);
     mysqli_close($link);
 }
-    ?>
+?>
 
 <!DOCTYPE html>
 <html lang="en">
