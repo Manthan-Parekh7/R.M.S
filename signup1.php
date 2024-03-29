@@ -2,8 +2,6 @@
 $showAlert = false;
 $showError = false;
 $showSuccess = false;
-
-// require_once 'config.php';
 if (isset($_POST['email'])) {
     $server = "127.0.0.1";
     $username = "root";
@@ -96,24 +94,24 @@ if (isset($_POST['email'])) {
                 <h1>Sign Up</h1>
                 <div class="name">
 
-                    <input type="text" name="name" placeholder="Create User Name" required><i class='bx bx-user'></i>
+                    <input type="text" name="name" placeholder="Create User Name" autocomplete="off" required><i class='bx bx-user'></i>
                 </div>
                 <div class="email">
 
-                    <input type="email" name="email" placeholder="Enter Your Email Address" required><i class='bx bxs-envelope'></i>
+                    <input type="email" name="email" placeholder="Enter Your Email Address" autocomplete="off" required><i class='bx bxs-envelope'></i>
                 </div>
                 <div class="password">
 
-                    <input type="password" name="password" placeholder="Create Password" required>
+                    <input type="password" name="password" placeholder="Create Password" autocomplete="off" required>
                 </div>
                 <div class="cpassword">
 
-                    <input type="password" name="cpassword" placeholder="Confirm Password" required><i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="cpassword" placeholder="Confirm Password" autocomplete="off" required><i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="button">
                     <button type="submit">Sign Up</button>
                 </div>
-                <div class="account">Already Have an Account ?? <a href="login1.html">Log In</a></div>
+                <div class="account">Already Have an Account ?? <a href="login1.php">Log In</a></div>
             </form>
         </div>
     </div>

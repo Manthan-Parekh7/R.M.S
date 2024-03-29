@@ -15,7 +15,7 @@ body{
 }
 
 h2{
-    margin-top: -90px;
+    margin-top: 10px;
     border-radius: 10px;
     background-color: rgb(255, 0, 0 , 0.3);
     margin-right: 12px;
@@ -150,7 +150,9 @@ h2{
     box-sizing: border-box;
     background-color: black;
     height: 50px;
-    margin: -140px -7px 0px -7px;
+    top: 0;
+    right: 0;
+    left: 0 ;
     padding-right: 20px;
     padding-top: 5px;
     width: 100%;

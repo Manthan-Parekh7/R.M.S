@@ -1,6 +1,5 @@
 <?php
 $showError = false;
-// require_once 'config.php';
 if (isset($_POST['email'])) {
     $server = "127.0.0.1";
     $username = "root";
@@ -23,12 +22,6 @@ if (isset($_POST['email'])) {
         header("Location: index.html");
         exit();
     } else {    //User not exist in data base or entered wrong password
-        // function alert1($message) {
-        //     echo "<script>alert('$message');
-        //     window.location.href='login1.html'
-        //     </script>";
-        // }
-        // alert1("You are not registered yet or entered worng password!!");
         $showError = true;
     }
     
@@ -78,20 +71,20 @@ if (isset($_POST['email'])) {
             <form action="login1.php" method="post">
                 <h1>Login</h1>
                 <div class="input-box">
-                    <input type="email" name="email" placeholder="Enter Your user email" required>
+                    <input type="email" name="email" placeholder="Enter Your user email" autocomplete="off" required>
                     <i class='bx bx-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" placeholder="Enter Your Password" required>
+                    <input type="password" name="password" placeholder="Enter Your Password" autocomplete="off" required>
                     <i class='bx bx-lock'></i>
                 </div>
                 <div class="remember-forgot">
-                    <label><input type="checkbox" name="remember" id="">Remember Me</label>
+                    <label><input type="checkbox" name="remember" id="remember">Remember Me</label>
                     <a href="#" target="_blank">Forgot Password</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="register-link">
-                    <p>Don't Have An Account?? <a href="signup1.html">Register</a></p>
+                    <p>Don't Have An Account?? <a href="signup1.php">Register</a></p>
                 </div>
             </form>
         </div>

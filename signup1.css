@@ -14,7 +14,7 @@ body{
     background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover;
 }
 #alert{
-    margin-top: 10px;
+    margin-top: 28px;
     border-radius: 10px;
     background-color: rgba(255, 179, 0,0.3);
     margin-right: 12px;
@@ -24,7 +24,7 @@ body{
 }
 
 #error{
-    margin-top: -90px;
+    margin-top: 28px;
     border-radius: 10px;
     background-color: rgb(255, 0, 0 , 0.3);
     margin-right: 12px;
@@ -34,12 +34,12 @@ body{
 }
 
 #Success{
-    margin-top: -90px;
+    margin-top: 28px;
     border-radius: 10px;
-    background-color: rgba(0, 255, 0, 0.3);
+    background-color: rgba(0, 255, 0, 0.2);
     margin-right: 12px;
     padding: 12px;
-    color: green;
+    color: rgb(0, 255, 0);
     z-index: 1;
 }
 .box{
@@ -142,7 +142,9 @@ button:hover{
     box-sizing: border-box;
     background-color: black;
     height: 50px;
-    margin: -140px -7px 0px -7px;
+    top: 0;
+    right: 0;
+    left: 0 ;
     padding-right: 20px;
     padding-top: 5px;
     width: 100%;
@@ -158,14 +160,4 @@ button:hover{
 .navbar i{
     font-size: 30px;
     display: flex;
-}
-
-.error{
-    color: #af4242;
-    background-color: #fde8ec;
-    padding: 10px;
-    display: none;
-    transform: translateY(-20px);
-    margin-bottom: 20px;
-    font-size: 14px;
 }
