@@ -80,7 +80,7 @@ if (isset($_POST['email'])) {
                 </div>
                 <div class="remember-forgot">
                     <label><input type="checkbox" name="remember" id="remember">Remember Me</label>
-                    <a href="#" target="_blank">Forgot Password</a>
+                    <a href="forgot-password.php" target="_blank">Forgot Password</a>
                 </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="register-link">
