@@ -11,12 +11,22 @@
         body {
             display: flex;
             flex-direction: column;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
             min-height: 100vh;
             font-family: "Poppins", sans-serif;
             background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover;
             color: whitesmoke;
+        }
+        .container{
+            width: 70vw;
+            color: whitesmoke;
+            border: 2px solid gray;
+            backdrop-filter: blur(20px);
+            background: transparent;
+            box-shadow: 0 0 10px black;
+            border-radius: 25px;
+            padding:30px 40px; 
         }
 
         h3 {
@@ -25,7 +35,7 @@
         }
 
         input {
-            width: auto;
+            /* width: auto; */
             height: 30px;
             font-family: "Poppins", sans-serif;
             background: transparent;
@@ -34,14 +44,16 @@
             font-size: 20px;
             color: white;
             padding: 20px;
-
         }
 
         input::placeholder {
             color: gray;
 
         }
-
+        input:focus{
+            width: 450px;
+            transition: all 2s ease-in-out;
+        }
         label{
             font-size: 30px
         }
