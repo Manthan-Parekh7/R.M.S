@@ -77,7 +77,7 @@
     </style>
 </head>
 <body>
-    <form action="send-password-reset.php" method="get" autocomplete="off">
+    <form action="send-password-reset.php" method="post" autocomplete="off">
         <div class="container">
             <h3>Forgot Your Password?</h3>
             <label for="email">Enter Your Registered Email Id : </label>

@@ -1,5 +1,5 @@
 <?php
-if(isset($_GET["email"])){
+if(isset($_POST["email"])){
 $server = "127.0.0.1";
 $username = "root";
 $password = "";
@@ -10,10 +10,16 @@ $link = mysqli_connect($server, $username, $password, $db_name);
 if ($link === false) {
     die("ERROR : - connection to this database failed due to" . mysqli_connect_error());
 }
-    if(isset($_POST['$cpaasword'])){
-        $email = $_GET["email"];
+
+if(isset($_POST["cpassword"])) {
+    if (isset($_POST["email"])) {
+        // Get hidden input value
+        $email = $_POST["email"];
+        
         $password = $_POST["password"];
-        $cpassword = $_POST["cpassword"];
+
+    $cpassword = $_POST["cpassword"];
+    
     if ($password !== $cpassword) {
         function alert($message)
         {
@@ -56,7 +62,7 @@ if ($link === false) {
     // Close connection
     mysqli_close($link);
 }
-
+}
 }
 ?>
 <html>
@@ -83,6 +89,7 @@ if ($link === false) {
         <input type="Password" name="password" id="password" required/><br>
         <label for="cpassword">Confirm Password : </label>
         <input type="password" name="cpassword" id="cpassword" required/><br>
+        <input type="hidden" name="email" value="<?php echo '$email';?>"/>
         <input type="submit" value="Submit">
         <a href="login.html">Remember Password?</a>
     </form>
