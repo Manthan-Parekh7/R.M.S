@@ -95,14 +95,8 @@ if (isset($_POST['email'])) {
             <div class="icon">
                 <a href="index.html"><i class='bx bxs-home'></i></a>
             </div>
-            <div class="">
-                <a href=""></a>
-            </div>
-            <div class="">
-                <a href=""></a>
-            </div>
-            <div class="">
-                <a href=""></a>
+            <div class="login">
+                <a href="login1.php">Log In</a>
             </div>
         </ul>
     </div>

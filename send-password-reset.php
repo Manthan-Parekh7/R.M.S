@@ -91,7 +91,7 @@ if(isset($_POST["cpassword"])) {
         <input type="password" name="cpassword" id="cpassword" required/><br>
         <input type="hidden" name="email" value="<?php echo '$email';?>"/>
         <input type="submit" value="Submit">
-        <a href="login.html">Remember Password?</a>
+        <a href="login1.php">Remember Password?</a>
     </form>
 </body>
 
