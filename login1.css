@@ -14,15 +14,6 @@ body{
     background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg) no-repeat center center/cover;
 }
 
-h2{
-    margin-top: 10px;
-    border-radius: 10px;
-    background-color: rgb(255, 0, 0 , 0.3);
-    margin-right: 12px;
-    padding: 12px;
-    color: red;
-    z-index: 1;
-}
 .box{
     display: flex;
     justify-content: center;
@@ -150,7 +141,7 @@ h2{
     box-sizing: border-box;
     background-color: black;
     height: 50px;
-    top: 0;
+    top: 7px;
     right: 0;
     left: 0 ;
     padding-right: 20px;

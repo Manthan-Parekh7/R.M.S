@@ -49,8 +49,8 @@ if (isset($_POST['email'])) {
     <?php
     if($showError) {
         echo '
-        <div class="alert alert-danger alert-dismissible fade show" role="alert">
-        <strong>Error!!</strong> You Are Not Registered Yet Or You Entered Wrong Password!!
+        <div class="alert alert-danger alert-dismissible fade show" role="alert" my-6>
+        <strong>Error!!</strong>You Are Not Registered Yet Or You Entered Wrong Password!!
         <button type="button" class="close" data-dismiss="alert" aria-label="Close">
         <span aria-hidden="true">&times;</span>
   </button>
