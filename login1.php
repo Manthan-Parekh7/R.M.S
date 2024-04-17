@@ -85,10 +85,6 @@ if (isset($_POST['email'])) {
                     <input type="password" name="password" placeholder="Enter Your Password" autocomplete="off" required>
                     <i class='bx bx-lock'></i>
                 </div>
-                <div class="remember-forgot">
-                    <label><input type="checkbox" name="remember" id="remember">Remember Me</label>
-                    <a href="forgot-password.php" target="_blank">Forgot Password</a>
-                </div>
                 <button type="submit" class="btn">Login</button>
                 <div class="register-link">
                     <p>Don't Have An Account?? <a href="signup1.php">Register</a></p>
