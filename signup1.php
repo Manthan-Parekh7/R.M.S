@@ -2,25 +2,49 @@
 $showAlert = false;
 $showError = false;
 $showSuccess = false;
+$isValid = true;
+$emailError = false;
+$nameError = false;
+$passwordError = false;
+$confpasswordError = false;
+$nameValue = "";
+$emailValue = "";
+$passwordValue = "";
+$confpasswordValue = "";
+
 if (isset($_POST['email'])) {
-    $server = "127.0.0.1";
-    $username = "root";
-    $password = "";
-    $db_name = "registered users";
-
-    $link = mysqli_connect($server, $username, $password, $db_name);
-
-    if ($link === false) {
-        die("ERROR : - connection to this database failed due to" . mysqli_connect_error());
-    }
-
+   include('config.php');   
     $name = $_POST['name'];
     $email = $_POST['email'];
     $password = $_POST['password'];
     $confpassword = $_POST['cpassword'];   
+    
+    $nameValue = $name;
+    $emailValue = $email;
+    $passwordValue = $password;
+    $confpasswordValue = $confpassword;
+
+    if(empty($name)){
+        $nameError = true;
+        $isValid = false;
+    }
+    if(empty($email)){
+        $emailError = true;
+        $isValid = false;
+    }
+    if(empty($password)){
+        $passwordError = true;
+        $isValid = false;
+    }
+    if(empty($confpassword)){
+        $confpasswordError = true;
+        $isValid = false;
+    }
+if($isValid){
 
     if ($password !== $confpassword) {
         $showAlert = true;
+        
     } else{
         $query = mysqli_query($link, "SELECT * FROM `registration` WHERE email = '$email'");
         if (mysqli_num_rows($query) > 0) {
@@ -42,6 +66,7 @@ if (isset($_POST['email'])) {
         }
     }
     $link->close();
+}
 }
 ?>
 
@@ -65,7 +90,7 @@ if (isset($_POST['email'])) {
         echo '
         <div class="alert alert-warning alert-dismissible fade show" role="alert">
         <strong>Alert!!</strong> Password And Confirm Password Do Not Match
-        <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <button type="button" class="close" data-dismiss="alert" aria-label="Close">    
         <span aria-hidden="true">&times;</span>
   </button>
 </div>';
@@ -93,33 +118,53 @@ if (isset($_POST['email'])) {
     <div class="container1">
         <ul class="navbar">
             <div class="icon">
-                <a href="index.html"><i class='bx bxs-home'></i></a>
-            </div>
-            <div class="login">
-                <a href="login1.php">Log In</a>
+                <a href="home.html"><img src="logo.jpg" width="50"></a>
             </div>
         </ul>
     </div>
         <div class="box">
             <div class="container">
             <form action="signup1.php" method="post">
-
                 <h1>Sign Up</h1>
                 <div class="name">
 
-                    <input type="text" name="name" placeholder="Create User Name" autocomplete="off" required><i class='bx bx-user'></i>
+                    <input type="text" name="name" placeholder="Create User Name" value="<?php echo $nameValue; ?>" autocomplete="off">
+                    <?php
+                    if($nameError){
+                        echo '<strong style="color:red;">Name Is Required Field</strong>';
+                        } 
+                        ?>
+                    <i class='bx bxs-user'></i>
                 </div>
                 <div class="email">
 
-                    <input type="email" name="email" placeholder="Enter Your Email Address" autocomplete="off" required><i class='bx bxs-envelope'></i>
+                    <input type="email" name="email" placeholder="Enter Your Email Address" value="<?php echo $emailValue; ?>" autocomplete="off">
+                    <?php
+                    if($emailError){
+                        echo '<strong style="color:red;">Email Is Required Field</strong>';
+                        } 
+                        ?>
+                    <i class='bx bxs-envelope'></i>
                 </div>
                 <div class="password">
 
-                    <input type="password" name="password" placeholder="Create Password" autocomplete="off" required>
+                    <input type="password" name="password" placeholder="Create Password" value="<?php echo $passwordValue; ?>" autocomplete="off">
+                    <?php
+                    if($passwordError){
+                        echo '<strong style="color:red;">Password Is Required Field</strong>';
+                        } 
+                        ?>
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="cpassword">
 
-                    <input type="password" name="cpassword" placeholder="Confirm Password" autocomplete="off" required><i class='bx bxs-lock-alt'></i>
+                    <input type="password" name="cpassword" placeholder="Confirm Password" value="<?php echo $confpasswordValue; ?>" autocomplete="off">
+                    <?php
+                    if($confpasswordError){
+                        echo '<strong style="color:red;">Confirm Password Is Required Field</strong>';
+                        } 
+                        ?>
+                    <i class='bx bxs-lock-alt'></i>
                 </div>
                 <div class="button">
                     <button type="submit">Sign Up</button>

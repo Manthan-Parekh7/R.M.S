@@ -1,164 +1,162 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+    @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 
-*{
-    font-family: "Poppins",sans-serif;
-    box-sizing: border-box;
-}
+    * {
+        font-family: "Poppins", sans-serif;
+        box-sizing: border-box;
+    }
 
-body{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    min-height: 100vh;
-    width: 100%;
-    background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover;
-}
-/* #alert{
-    margin-top: 28px;
-    border-radius: 10px;
-    background-color: rgba(255, 179, 0,0.3);
-    margin-right: 12px;
-    padding: 12px;
-    color: rgb(255, 179, 0);
-    z-index: 1;
-}
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;            
+        min-height: 100vh;
+        background-color: rgb(232, 229, 229);
 
-#error{
-    margin-top: 28px;
-    border-radius: 10px;
-    background-color: rgb(255, 0, 0 , 0.3);
-    margin-right: 12px;
-    padding: 12px;
-    color: red;
-    z-index: 1;
-}
+    }
 
-#Success{
-    margin-top: 28px;
-    border-radius: 10px;
-    background-color: rgba(0, 255, 0, 0.2);
-    margin-right: 12px;
-    padding: 12px;
-    color: rgb(0, 255, 0);
-    z-index: 1;
-} */
-.box{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    /* min-width: 100vw; */
-    width: 100%;
-    box-sizing: border-box;
-}
-.container{
-    width: 500px;
-    height: 530px;
-    background: transparent;
-    border: 2px solid gray;
-    backdrop-filter:  blur(20px);
-    box-shadow: 0px 0px 10px black;
-    color: white;
-    padding: 30px 40px;
-    border-radius: 25px;
-}
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        box-sizing: border-box;
+    }
 
-.name i , .email i , .cpassword i{
-    position: absolute;
-    right: 10px;
-    top: 50%;
-    transform: translateY(-50%);
-    font-size: 20px;
-}
+    .container {
+        width: 500px;
+        height: 500px;
+        background: white;
+        border: 2px solid black;
+        backdrop-filter: blur(20px);
+        box-shadow: 0px 0px 10px black;
+        color: black;
+        padding: 30px 40px;
+        border-radius: 25px;
+    }
 
-h1{
-    font-size: 40px;
-    text-align: center;
+    .name i,
+    .email i,
+    .password i,
+    .cpassword i {
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        font-size: 20px;
+    }
 
-}
-.name , .email , .password , .cpassword {
-    position: relative;
-    width: 100%;
-    height: 50px;
-    margin: 20px 0px;
-    font-size: 25px;
-}
-input{
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 2px solid gray;
-    border-radius: 40px;
-    font-size: 20px;
-    color: white;
-    padding: 20px 50px 20px 20px;
+    h1 {
+        font-size: 40px;
+        text-align: center;
 
-}
-input::placeholder{
-    color: gray;
+    }
+    strong{
+        margin-left: 20px;
+        font-size: 14px;
+    }
+    .name,
+    .email, 
+    .password,
+    .cpassword {
+        position: relative;
+        width: 100%;
+        height: 50px;
+        margin: 20px 0px;
+        font-size: 10px;
+    }
+    input {
+        width: 100%;
+        height: 100%;
+        background: transparent;
+        border: 2px solid gray;
+        border-radius: 40px;
+        font-size: 20px;
+        color: black;
+        padding: 20px 50px 20px 20px;
 
-}
-.button button{
-    width: 100%;
-    height: 40px;
-    font-size: 20px;
-    background-color: gray;
-    border: 1px solid black;
-    border-radius: 50px;
-    box-shadow: 0px 0px 5px black;
-    font-weight: 600;
-    cursor: pointer;
-}
-button:hover{
-    background-color: white;
-}
-.account{
-    font-size: 15px;
-    text-align: center;
-    margin: 10px;
+    }
 
-}
-.account a{
-    color: white;
-    font-weight: bolder;
-    text-decoration: none;
-}
-.account a:hover{
-    text-decoration: underline;
-}
+    input::placeholder {
+        color: gray;
+    }
 
-.navbar a {
-    font-size: 25px;
-    color: white;
-    text-decoration: none;
-}
+    .button button {
+        width: 100%;
+        height: 40px;
+        font-size: 20px;
+        background: rgb(219, 218, 218);
+        border: 1px solid black;
+        border-radius: 50px;
+        box-shadow: 0px 0px 5px black;
+        font-weight: 600;
+        cursor: pointer;
+        margin-top: 20px;
+    }
 
-.icon  {
-    list-style: none;
-    padding-left: -20px;
-}
+    button:hover {
+        background-color: rgb(173, 171, 171);
+    }
 
-.navbar {
-    display: flex;
-    box-sizing: border-box;
-    background-color: rgb(0 , 0 , 0 , 0.2);
-    backdrop-filter: blur(20px);
-    height: 50px;
-    top: 7px;
-    right: 0;
-    left: 0 ;
-    padding-right: 20px;
-    padding-top: 5px;
-    width: 100%;
-    justify-content:space-between;
-    align-items: center;
-    position: fixed;
-}
+    .account {
+        font-size: 15px;
+        text-align: center;
+        margin: 10px;
+    }
 
-.navbar a:hover{
-    cursor: pointer;
-    color: rgb(255, 106, 0);
-}
-.navbar i{
-    font-size: 30px;
-    display: flex;
-}
+    .account a {
+        color: black;
+        font-weight: bolder;
+        text-decoration: none;
+    }
+
+    .account a:hover {
+        text-decoration: underline;
+    }
+
+    .navbar a {
+        font-size: 25px;
+        color: white;
+        text-decoration: none;
+    }
+
+    .icon{
+        margin-left: 25px;
+    }
+    .navbar {
+        display: flex;
+        box-sizing: border-box;
+        background-color: white;
+        box-shadow: 1px 1px 10px black;
+        backdrop-filter: blur(20px);
+        height: 70px;
+        top: 0px;
+        right: 0;
+        left: 0;
+        padding-right: 20px;
+        width: 100%;
+        justify-content: start;
+        align-items: center;
+        position: fixed;
+    }
+
+    .container1 {
+        display: flex;
+        justify-content: start;
+        align-items: start;
+        width: 100%;
+        box-sizing: border-box;
+        position: fixed;
+        margin-right: 10px;
+        margin-left: -30px;
+        margin-top: -20px;
+    }
+
+    .navbar a:hover {
+        cursor: pointer;
+        color: rgb(255, 106, 0);
+    }
+
+    .navbar i {
+        font-size: 30px;
+        display: flex;
+    }

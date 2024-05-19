@@ -10,29 +10,31 @@
         <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 
     <style>
-        body {
-            background: url(https://img.freepik.com/premium-vector/night-scene-empty-road-with-forest-mountain_104785-806.jpg)no-repeat center center/cover;
-            /* background-color: rgb(203, 190, 190); */
-            min-height: 100vh;
-        }
-
+    body{
+        overflow-y: hidden;
+    }
         .navbar a {
             font-size: 25px;
-            color: white;
+            color: black;
             text-decoration: none;
         }
 
-        .icon , .signup , .login {
+         .signup , .login , .about{
             list-style: none;
             padding: 0px 15px;
+        }
+
+        .icon{
+            margin-right: auto;
         }
 
         .navbar {
             display: flex;
             box-sizing: border-box;
-            background-color: rgb(0 , 0 , 0 , 0.2);
+            background-color: white;
+            box-shadow: 1px 1px 10px black;
             backdrop-filter: blur(20px);
-            height: 50px;
+            height: 70px;
             margin: -7px -7px 0px -7px;
             padding-right: 20px;
             padding-top: 5px;
@@ -44,11 +46,21 @@
         
         .navbar a:hover{
             cursor: pointer;
-            color: rgb(255, 106, 0);
+            color: rgb(13, 81, 253);
         }
         .navbar i{
             font-size: 30px;
             display: flex;
+        }
+        .img{
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .img img{
+            width: 500px;
+            height: 500px;
         }
     </style>
 </head>
@@ -56,9 +68,6 @@
 <body>
     <div class="container1">
         <ul class="navbar">
-            <div class="icon">
-                <!-- <a href="index.html"><i class='bx bxs-home'></i></a> -->
-            </div>
             <div class="signup">
                 <a href="signup1.php">Sign Up</a>
             </div>
@@ -69,6 +78,9 @@
                 <a href="about.html">About Us</a>
             </div>
         </ul>
+        <div class="img">
+            <a href="#"><img src="logo.jpg"></a>
+        </div>
     </div>
 </body>
 
