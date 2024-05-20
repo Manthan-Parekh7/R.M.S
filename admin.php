@@ -1,3 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Admin Handle(Update if the table is empty)</title>
+<style>
+    body {
+        font-family: Arial, sans-serif;
+    }
+    table {
+        width: 100%;
+        border-collapse: collapse;
+        margin: 20px 0;
+    }
+    table, th, td {
+        border: 1px solid #ddd;
+    }
+    th, td {
+        padding: 12px;
+        text-align: center;
+    }
+    th {
+        background-color: #f2f2f2;
+    }
+    tr:nth-child(even) {
+        background-color: #f9f9f9;
+    }
+    tr:hover {
+        background-color: #f1f1f1;
+    }
+    .btn {
+        display: inline-block;
+        padding: 10px 20px;
+        font-size: 14px;
+        cursor: pointer;
+        text-align: center;
+        text-decoration: none;
+        outline: none;
+        color: #fff;
+        background-color: #4CAF50;
+        border: none;
+        border-radius: 15px;
+        box-shadow: 0 4px #999;
+    }
+    .btn:hover {background-color: #3e8e41}
+    .btn:active {
+        background-color: #3e8e41;
+        box-shadow: 0 2px #666;
+        transform: translateY(2px);
+    }
+</style>
+</head>
+<body>
+
 <?php
 // Include config file
 include('config.php');
@@ -33,7 +87,6 @@ else if($email == "r6@gmail.com"){
     $sql = "SELECT * FROM r6";
 }
 
-
 // Attempt select query execution
 if ($result = mysqli_query($link, $sql)) {
     if (mysqli_num_rows($result) > 0) {
@@ -41,7 +94,7 @@ if ($result = mysqli_query($link, $sql)) {
         echo "<thead>";
         echo "<tr>";
         echo "<th>Table</th>";
-        echo "<th>Value</th>";
+        echo "<th>Is Booked</th>";
         echo "<th>Email Id</th>";
         echo "<th>Action</th>";
         echo "</tr>";
@@ -54,7 +107,7 @@ if ($result = mysqli_query($link, $sql)) {
             echo "<td>" . $row['value'] . "</td>";
             echo "<td>" . $row['email'] . "</td>";
             echo "<td>";
-            echo "<a href='update.php?eid=$email&id=$id'>Update Record</a>";
+            echo "<a href='update.php?eid=$email&id=$id' class='btn'>Update Record</a>";
             echo "&nbsp;";
             echo "</td>";
             echo "</tr>";
@@ -74,3 +127,7 @@ if ($result = mysqli_query($link, $sql)) {
 
 // Close connection
 mysqli_close($link);
+?>
+
+</body>
+</html>

@@ -1,8 +1,6 @@
 <?php
 if (isset($_GET['eid'])) {
     $email = base64_decode(urldecode($_GET['eid']));
-    $session_name = "user_" . md5($email); // Create the unique session name
-    session_name($session_name); // Set the session name
     session_start(); // Start the session
 } else {
     header("Location: login1.php?message=Please Login First!!");
@@ -141,7 +139,7 @@ if (isset($_GET['eid'])) {
                     <a href="about.html">About Us</a>
                 </div>
                 <div class="logout">
-                    <a href="logout.php?eid=<?php echo $_GET['eid']; ?>">Log Out</a>
+                    <a href="logout.php?eid=<?php echo $_GET['eid'];?>">Log Out</a>
                 </div>
             </ul>
         </div>

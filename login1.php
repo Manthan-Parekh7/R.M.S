@@ -24,9 +24,12 @@ if (isset($_POST['email'])) {
         $isValid = false;
     }
     if ($isValid) {
+        // session_start();
+        // $_SESSION['username'] = "user_" . md5($email); // Create a unique session name
+        // session_name($_SESSION['username']);
+        // $session_name = "user_" . md5($email); // Create a unique session name
+        // session_name($session_name);
         session_start();
-        $_SESSION['username'] = "user_" . md5($email); // Create a unique session name
-        session_name($_SESSION['username']);
         if($email == "r1@gmail.com" || $email == "r2@gmail.com" || $email == "r3@gmail.com" || $email == "r4@gmail.com" || $email == "r5@gmail.com" || $email == "r6@gmail.com")
         {
                 $stmt = mysqli_prepare($link, "SELECT * FROM `admin_user` WHERE email = ? AND `password` = ?");
@@ -39,7 +42,7 @@ if (isset($_POST['email'])) {
 
             if (isset($_POST['remember'])) {
                 setcookie("email", $row['email'], time() + (3600) , "/");
-                setcookie("pass", $row['password'], time() + (3600) , "/");
+                setcookie("pass",  base64_encode($row['password']) , time() + (3600) , "/");
             }
             $_SESSION['id'] = $row['sno'];
             $encodedEmail = urlencode(base64_encode($email));
@@ -63,7 +66,7 @@ if (isset($_POST['email'])) {
             $row = mysqli_fetch_array($result);
             if (isset($_POST['remember'])) {
                 setcookie("email", $row['email'], time() + (3600) , "/");
-                setcookie("pass", $row['conf.password'], time() + (3600) , "/");
+                setcookie("pass",  base64_encode($row['conf.password']) , time() + (3600) , "/");
             }
             $_SESSION['id'] = $row['sno'];
             $encodedEmail = urlencode(base64_encode($email));
@@ -135,8 +138,8 @@ if (isset($_POST['email'])) {
                 </div>
                 <div class="input-box">
                     <input type="password" name="password" placeholder="Enter Your Password" value="<?php if (isset($_COOKIE["pass"])) {
-                                                                                                        echo $_COOKIE["pass"];
-                                                                                                    } else echo $passwordValue; ?>" autocomplete="off">
+                                                                                                        echo base64_decode($_COOKIE["pass"]);
+                                                                                                    } else echo base64_decode($passwordValue); ?>" autocomplete="off">
                     <?php
                     if ($passwordError) {
 
