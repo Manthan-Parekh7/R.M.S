@@ -118,7 +118,7 @@ if($isValid){
     <div class="container1">
         <ul class="navbar">
             <div class="icon">
-                <a href="home.html"><img src="logo.jpg" width="50"></a>
+            <a href="home.html"><i class='bx bxs-home'></i></a>
             </div>
         </ul>
     </div>

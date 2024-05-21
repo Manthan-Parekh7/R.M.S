@@ -24,11 +24,10 @@ if (isset($_POST['email'])) {
         $isValid = false;
     }
     if ($isValid) {
-        // session_start();
-        // $_SESSION['username'] = "user_" . md5($email); // Create a unique session name
-        // session_name($_SESSION['username']);
-        // $session_name = "user_" . md5($email); // Create a unique session name
-        // session_name($session_name);
+        if(isset($_SESSION['id'])){
+            header("Location : index.php?eid=". urlencode(base64_encode($emailValue)) ."&msg=we remember you");
+            exit();
+        }
         session_start();
         if($email == "r1@gmail.com" || $email == "r2@gmail.com" || $email == "r3@gmail.com" || $email == "r4@gmail.com" || $email == "r5@gmail.com" || $email == "r6@gmail.com")
         {
@@ -117,7 +116,7 @@ if (isset($_POST['email'])) {
     ?>
     <ul class="navbar">
         <div class="icon">
-            <a href="home.html"><img class="icon" src="logo.jpg" width="50"></a>
+        <a href="home.html"><i class='bx bxs-home'></i></a>
         </div>
     </ul>
     </div>
@@ -137,9 +136,7 @@ if (isset($_POST['email'])) {
                     <i class='bx bxs-user'></i>
                 </div>
                 <div class="input-box">
-                    <input type="password" name="password" placeholder="Enter Your Password" value="<?php if (isset($_COOKIE["pass"])) {
-                                                                                                        echo base64_decode($_COOKIE["pass"]);
-                                                                                                    } else echo base64_decode($passwordValue); ?>" autocomplete="off">
+                    <input type="password" name="password" placeholder="Enter Your Password" value="<?php echo $passwordValue; ?>" autocomplete="off">
                     <?php
                     if ($passwordError) {
 

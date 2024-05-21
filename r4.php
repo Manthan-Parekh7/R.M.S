@@ -85,159 +85,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <title>Restaurant 4</title>
     <link rel="shortcut icon" href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
-    <style>
-        .heading {
-            font-size: 40px;
-            font-weight: bolder;
-            text-decoration: underline;
-            text-align: center;
-            margin-top: 30px;
-        }
-
-        .container {
-            display: flex;
-            flex-direction: column;
-            min-height: 80vh;
-            width: 100%;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .container_1 {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-            margin-top: 30px;
-        }
-
-        .container_2 {
-            display: flex;
-            width: 100%;
-            justify-content: center;
-        }
-
-        .container1 {
-            display: grid;
-            grid-template-columns: repeat(2, 100px);
-            text-align: center;
-            grid-gap: 10px;
-            margin: 50px;
-            border: 2px solid black;
-            padding: 10px;
-        }
-
-        .container1 #box3 {
-            grid-column-start: 1;
-            grid-column-end: 3;
-        }
-
-        .container2 {
-            display: grid;
-            grid-template-columns: repeat(3, 100px);
-            text-align: center;
-            grid-gap: 10px;
-            margin: 50px;
-            border: 2px solid black;
-            padding: 10px;
-        }
-
-        .container2 #box4 {
-            grid-column-start: 1;
-            grid-column-end: 4;
-        }
-
-        .container3 {
-            display: grid;
-            grid-template-columns: repeat(4, 100px);
-            text-align: center;
-            grid-gap: 10px;
-            margin: 50px;
-            border: 2px solid black;
-            padding: 10px;
-        }
-
-        .container3 #box5 {
-            grid-column-start: 1;
-            grid-column-end: 5;
-        }
-
-        .boxs {
-            height: 50px;
-            background-color: black;
-            color: white;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            font-size: 15px;
-        }
-
-        .box {
-            height: 50px;
-            border: 1px solid black;
-            background-color: rgb(240, 240, 240);
-            font-size: 15px;
-            color: black;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-        }
-        .form-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            margin-top: 20px;
-        }
-
-        .form-container form {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-        }
-
-        .form-container input[type="checkbox"] {
-            margin: 5px;    
-        }
-
-        .form-container input[type="submit"] {
-            margin: 10px;
-        }
-        .checkboxes{
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            gap: 20px;
-        }
-        .btns{
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 50px;
-            width: 200px;
-            border-radius: 20px;
-            background-color: rgb(227, 157, 157);
-            color: black;
-            font-size: 1.3rem;
-            transition: all .2s ease-in-out;
-        }
-        .btns:hover{
-            border: 2px solid #ff96ad;
-            color: #ff96ad;
-            background-color: #000;
-            cursor: pointer;
-        }
-        .btn-container{
-            display: flex;
-            flex-direction: row;
-            align-items: center;
-            justify-content: center;
-            gap: 50px;
-        }
-        label{
-            font-size: 1.5rem;
-        }
-    </style>
+    <link rel="stylesheet" href="style.css">
+    
 </head>
 
 <body>
@@ -312,7 +161,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </div>
 
     <div class="form-container">
-        <form method="POST" action="r1.php?email=<?php echo $_GET['email']?>">
+        <form method="POST" action="r4.php?email=<?php echo $_GET['email']?>">
         <div class="checkboxes">
             <label for="Table1"> Table 1 </label>
             <input type="checkbox" name="option[]" id="Table1" value="Table1"><br>
@@ -328,8 +177,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <input type="checkbox" name="option[]" id="Table6" value="Table6"><br>
         </div>
             <div class="btn-container">
-                <input type="submit" class="btns"name="book" value="Book Table">
-                <input type="submit" class="btns"name="unbook" value="Unbook Table">
+                <div class="book">
+                    <input type="submit" class="btns"name="book" value="Book Table">
+                </div>
+                <div class="unbook">
+                    <input type="submit" class="btns"name="unbook" value="Unbook Table">
+                </div>
             </div>
         </form>
     </div>
