@@ -107,6 +107,7 @@ if (isset($_GET['eid']) || isset($_SESSION['id'])) {
             height: 350px;
             background-color: white;
             color: white;
+            box-shadow:0 0 10px white;
         }
 
         .box .name {
@@ -172,6 +173,24 @@ if (isset($_GET['eid']) || isset($_SESSION['id'])) {
             width: 50px;
             border-radius: 50%;
         }
+        #box1{
+            background:url('https://images.unsplash.com/photo-1517248135467-4c7edcad34c4?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+        }
+        #box2{
+            background:url('https://t3.ftcdn.net/jpg/03/24/73/92/360_F_324739203_keeq8udvv0P2h1MLYJ0GLSlTBagoXS48.jpg') no-repeat center center/cover;
+        }
+        #box3{
+            background:url('https://images.unsplash.com/photo-1552566626-52f8b828add9?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8cmVzdGF1cmFudHxlbnwwfHwwfHx8MA%3D%3D') no-repeat center center/cover;
+        }
+        #box7{
+            background:url('https://assets3.thrillist.com/v1/image/3079884/750x500/flatten;crop;webp=auto;jpeg_quality=50.jpg') no-repeat center center/cover;
+        }
+        #box8{
+            background:url('https://cdn.vox-cdn.com/thumbor/5d_RtADj8ncnVqh-afV3mU-XQv0=/0x0:1600x1067/1200x900/filters:focal(672x406:928x662)/cdn.vox-cdn.com/uploads/chorus_image/image/57698831/51951042270_78ea1e8590_h.7.jpg') no-repeat center center/cover;
+        }
+        #box9{
+            background:url('https://toohotel.com/wp-content/uploads/2022/09/TOO_restaurant_Panoramique_vue_Paris_nuit_v2-scaled.jpg') no-repeat center center/cover;
+        }
     </style>
 </head>
 
@@ -182,7 +201,7 @@ if (isset($_GET['eid']) || isset($_SESSION['id'])) {
                 <a href=""><img src="logo.jpg"></a>
             </div>
             <div class="logout">
-                <a href="logout.php" name="logout">Log Out</a>
+                <a href="logout.php?eid=<?php echo $_GET['eid']; ?>" name="logout">Log Out</a>
             </div>
 
         </ul>

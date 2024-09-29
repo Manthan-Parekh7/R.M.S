@@ -116,7 +116,7 @@ if (isset($_POST['email'])) {
     ?>
     <ul class="navbar">
         <div class="icon">
-        <a href="home.html"><i class='bx bxs-home'></i></a>
+            <a href="home.html"><i class='bx bxs-home'></i></a>
         </div>
     </ul>
     </div>

@@ -1,57 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<title>Admin Handle(Update if the table is empty)</title>
-<style>
-    body {
-        font-family: Arial, sans-serif;
-    }
-    table {
-        width: 100%;
-        border-collapse: collapse;
-        margin: 20px 0;
-    }
-    table, th, td {
-        border: 1px solid #ddd;
-    }
-    th, td {
-        padding: 12px;
-        text-align: center;
-    }
-    th {
-        background-color: #f2f2f2;
-    }
-    tr:nth-child(even) {
-        background-color: #f9f9f9;
-    }
-    tr:hover {
-        background-color: #f1f1f1;
-    }
-    .btn {
-        display: inline-block;
-        padding: 10px 20px;
-        font-size: 14px;
-        cursor: pointer;
-        text-align: center;
-        text-decoration: none;
-        outline: none;
-        color: #fff;
-        background-color: #4CAF50;
-        border: none;
-        border-radius: 15px;
-        box-shadow: 0 4px #999;
-    }
-    .btn:hover {background-color: #3e8e41}
-    .btn:active {
-        background-color: #3e8e41;
-        box-shadow: 0 2px #666;
-        transform: translateY(2px);
-    }
-</style>
-</head>
-<body>
-
 <?php
 // Include config file
 include('config.php');
@@ -59,6 +5,7 @@ include('config.php');
 if (!$link) {
     die("Database connection failed.");
 }
+
 $encodedEmail = $_GET['eid'];
 $email = base64_decode(urldecode($encodedEmail));
 
@@ -129,5 +76,96 @@ if ($result = mysqli_query($link, $sql)) {
 mysqli_close($link);
 ?>
 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin Panel</title>
+    <link rel="shortcut icon"
+        href="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmUUSo7THCDrJG629AyXKTeQr1Cl-CpU6jgQ4WD63gmZYyrvU6SrKx17XxiIH7D8z7M_w&usqp=CAU">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            margin: 0;
+            padding: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color:black;
+        }
+
+        .logout {
+            margin-top: 20px;
+        }
+
+        .logout a {
+            padding: 10px 20px;
+            font-size: 20px;
+            color: white;
+            background-color: rgb(0,100,200);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+        }
+
+        .logout a:hover {
+            background-color: white;
+            color:rgb(0,100,200);
+            border:2px solid rgb(0,100,200);
+            font-weight:bold;
+        }
+
+        table {
+            width: 80%;
+            border-collapse: collapse;
+            margin: 25px 0;
+            font-size: 18px;
+            text-align: left;
+            color:white;
+        }
+
+        table th, table td {
+            padding: 12px 15px;
+        }
+
+        table thead tr {
+            background-color: rgb(0,100,200);
+            color: white;
+            text-align: left;
+            font-weight: bold;
+        }
+
+        table tbody tr {
+            border-bottom: 1px solid white;
+        }
+
+        table tbody tr:hover {
+            background-color: rgb(150,150,150,0.075);
+        }
+
+        a {
+            text-decoration: none;
+            color: #009879;
+        }
+
+        a:hover {
+            color: rgb(0,100,200);
+        }
+
+    </style>
+</head>
+
+<body>
+
+<div class="logout">
+    <a href="logout.php?eid=<?php echo $_GET['eid']; ?>" name="logout">Log Out</a>
+</div>
+
 </body>
+
 </html>
